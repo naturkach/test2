@@ -1,7 +1,6 @@
 branch feature
-world
+line3
 line3 on web
 line4
-line5 test gu
-
-line7
+line5
+line6
