@@ -34,7 +34,7 @@ jobs:
       VAR1: "hello"
       VAR2: "some var 2"
     steps:      
-      - name: run ${{ VAR1 }} deploy
+      - name: run ${{ env.VAR1 }} deploy
         run : echo "hello world from deployment"
         
       - name: deploypackage
