@@ -1,0 +1,22 @@
+# first git actions pipe
+name: CI-CD
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  testing:  
+    runs-on: ubuntu-latest      
+    steps:      
+      - name: run hello
+        run : echo "hello worls from testing"
+
+  deployment:  
+    runs-on: ubuntu-latest      
+    steps:      
+      - name: run hello
+        run : echo "hello worls from deployment"
+   
+  
