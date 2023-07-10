@@ -1,5 +1,8 @@
 # first git actions pipe
 name: CI-CD
+env:
+  APPLICATION_NAME: "my falask"
+  PACKAGE_NAME    :  "flask_deploy_ver_${{ github.sha }}"
 
 on:
   push:
@@ -12,6 +15,11 @@ jobs:
     steps:      
       - name: run hello test
         run : echo "hello worls from testing"
+        
+      - name: run commands
+        run : |
+          echo "hello messsage1"
+          echo "app name: ${{ env.APPLICATION_NAME }}"
 
   deployment:  
     runs-on: ubuntu-latest
@@ -19,5 +27,8 @@ jobs:
     steps:      
       - name: run hello deploy
         run : echo "hello worls from deployment"
+        
+      - name: deploypackage:
+        run : echo "deploy package name is ${{ env.PACKAGE_NAME }}"
    
   
