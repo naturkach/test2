@@ -30,9 +30,12 @@ jobs:
   deployment:  
     runs-on: ubuntu-latest
     needs: [testing]
+    env:
+      VAR1: "hello"
+      VAR2: "some var 2"
     steps:      
-      - name: run hello deploy
-        run : echo "hello worls from deployment"
+      - name: run ${{ VAR1 }} deploy
+        run : echo "hello world from deployment"
         
       - name: deploypackage
         run : echo "deploy package name is ${{ env.PACKAGE_NAME }}"
