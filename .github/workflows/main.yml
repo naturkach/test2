@@ -28,7 +28,7 @@ jobs:
       - name: run hello deploy
         run : echo "hello worls from deployment"
         
-      - name: deploypackage:
+      - name: deploypackage
         run : echo "deploy package name is ${{ env.PACKAGE_NAME }}"
    
   
